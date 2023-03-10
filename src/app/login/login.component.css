@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 12%;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10%;
+}
+
+mat-form-field {
+    width: 300%;
+    transform: translateX(-32%);
+}
+
+.header {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30%;
+    letter-spacing: 2px;
+    color: rgb(5, 5, 50);
+}

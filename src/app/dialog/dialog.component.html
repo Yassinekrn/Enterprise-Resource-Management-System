@@ -1,0 +1,52 @@
+
+<h1 mat-dialog-title>Add employee</h1>
+<div mat-dialog-content>
+    <form [formGroup]="employeeForm">
+      <mat-form-field class="example-full-width">
+        <mat-label>Employee ID</mat-label>
+        <input formControlName="ID" matInput #postalCode>
+        <!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+      </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Employee Name</mat-label>
+        <input formControlName="Name" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Employee Prename</mat-label>
+        <input formControlName="Prename" matInput>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Employee CIN</mat-label>
+        <input formControlName="CIN" matInput #postalCode maxlength="8">
+        <mat-hint align="end">{{postalCode.value.length}} / 8</mat-hint>
+      </mat-form-field>
+
+      <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Employee Email Address</mat-label>
+          <input formControlName="Email" matInput placeholder="pat@example.com" >
+        </mat-form-field>
+      </div>  
+      
+      <mat-form-field class="example-full-width">
+          <mat-label>Employee Phone Number</mat-label>
+          <span matPrefix style="padding-left: 5px;">+216 &nbsp;</span>
+          <input formControlName="Phone_Number" type="tel" matInput placeholder="249-487-86">
+          <mat-icon matSuffix>mode_edit</mat-icon>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Employee's Address</mat-label>
+        <textarea formControlName="Home_Address" matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Employee's Job position</mat-label>
+        <textarea formControlName="Emp_Function" matInput placeholder="Ex. Regular employee.."></textarea>
+      </mat-form-field>
+    </form>
+      <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="accent" mat-dialog-close  class="mrgn">Close</button>
+        <button mat-raised-button color="primary" class="mrgn" (click)="addEmployee()">{{actionBtn}}</button>
+        
+      </div>
+</div>
+

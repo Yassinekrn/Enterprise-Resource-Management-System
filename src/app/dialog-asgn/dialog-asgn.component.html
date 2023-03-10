@@ -1,0 +1,68 @@
+
+
+<h1 mat-dialog-title>Add Assignement</h1>
+<div mat-dialog-content>
+    <form [formGroup]="materialForm">
+      <mat-form-field class="example-full-width">
+        <mat-label>Assignement ID</mat-label>
+        <input formControlName="ID" matInput #postalCode>
+        <!-- <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint> -->
+      </mat-form-field>
+
+      
+  <mat-form-field appearance="fill">
+    <mat-label>Employee's ID</mat-label>
+    <mat-select formControlName="ID_Employee"  name="ID_Employee" >
+      <mat-option *ngFor="let employees of filteredEmployees" [value]="employees.id">
+        {{employees.id}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Material's ID</mat-label>
+    <mat-select formControlName="ID_Material"  name="ID_Material">
+      <mat-option *ngFor="let material of filteredMaterials" [value]="material.id">
+        {{material.id}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+
+   <!--  <mat-form-field appearance="fill">
+        <mat-label>Employee's ID</mat-label>
+        <input formControlName="ID_Employee" matInput>
+    </mat-form-field> -->
+    <!-- <mat-form-field appearance="fill">
+        <mat-label>Material's ID</mat-label>
+        <input formControlName="ID_Material" matInput>
+    </mat-form-field> -->
+    <!-- <mat-form-field class="example-full-width">
+        <mat-label>Material's Purchase Date</mat-label>
+        <input formControlName="Purchase_Date" matInput #postalCode maxlength="8">
+        <mat-hint align="end">{{postalCode.value.length}} / 8</mat-hint>
+      </mat-form-field> -->
+      <mat-form-field appearance="fill"><!-- outline -->
+        <mat-label>Choose a start date</mat-label>
+        <input formControlName="Start_Date" matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Choose an end date</mat-label>
+        <input formControlName="End_Date" matInput [matDatepicker]="picker2">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+
+    </form>
+      <div mat-dialog-action [align]="'end'">
+        <button mat-raised-button color="accent" mat-dialog-close  class="mrgn">Close</button>
+        <button mat-raised-button color="primary" class="mrgn" (click)="addAssignement()" disabled="false">{{actionBtn}}</button>
+        
+      </div>
+</div>
+

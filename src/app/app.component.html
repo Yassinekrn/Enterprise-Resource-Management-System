@@ -1,0 +1,21 @@
+<html>
+  <!-- Nav bar :: allows to navigate through all pages (excluding Login) -->
+  <p>
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon">
+        <mat-icon>supervised_user_circle</mat-icon>
+      </button>
+      <span>Choose Management Page</span>
+      <span class="example-spacer"></span>
+      <div class="btn-flex">
+        <!-- Here I can add the buttons which will allow the navigation from one page to another -->
+        <button mat-raised-button color="accent" (click)="goToEmployee()">Employees</button>
+        <button mat-raised-button color="accent" (click)="goToMaterial()">Materials</button>
+        <button mat-raised-button color="accent" (click)="goToAssignements()">Assignements</button>
+      </div>
+    </mat-toolbar>
+  </p>
+
+  <!-- Makes accessing other pages possible -->
+  <router-outlet></router-outlet>
+</html>
