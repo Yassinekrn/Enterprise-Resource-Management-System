@@ -1,0 +1,15 @@
+# Node.js (Frontend)
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.angular/
+
+# Visual Studio (.NET Backend)
+/backend/Admin_GM/bin/
+/backend/Admin_GM/obj/
+/backend/Admin_GM/*.user
+/backend/Admin_GM/*.suo
+
+# General
+.env
+*.log
+.DS_Store
