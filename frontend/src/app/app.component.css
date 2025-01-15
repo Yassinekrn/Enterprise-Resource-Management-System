@@ -1,0 +1,16 @@
+/* whole page background color */
+html {
+    background-color: rgb(237, 232, 245);
+    margin: 0;
+    padding: 0;
+  }
+
+/* for the tool bar */
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.btn-flex {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
