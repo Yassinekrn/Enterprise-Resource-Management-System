@@ -111,12 +111,6 @@ cd Enterprise-Resource-Management-System
 
 ---
 
-## Screenshots (Optional)
-
-Add relevant screenshots of the application UI, login page, dashboard, etc.
-
----
-
 ## Future Enhancements
 
 -   Add role-based authentication for advanced user management.
